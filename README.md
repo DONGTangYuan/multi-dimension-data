@@ -1,5 +1,5 @@
 # Additional Files For Experiment Section
-The code includes two methods: Exponential Smoothing and LightGBM for stock prediction. The steps can be divided as follows:
+The code includes two methods: Exponential Smoothing and LightGBM for stock prediction as addditional files for paper *A Stock Prediction Method Based on Multidimensional and Multilevel Feature Dynamic Fusion*. The steps can be divided as follows:
 
 1. **Data Acquisition and Preprocessing**: Retrieve historical trading data for stocks from eight different industries. Perform necessary preprocessing, including handling missing values and industry classification, and store the processed data in the corresponding folders.
 
