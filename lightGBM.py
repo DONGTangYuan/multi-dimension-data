@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import lightgbm as lgb
+import random
 
 window_size = 15
 industry_list = ['Chemical Industry','Electronic Technology','Information Technology','Lifestyle Services','Manufacturing and Transportation','Pharmaceuticals and Biotechnology','Finance','Construction']
@@ -96,7 +97,7 @@ def get_test_data(df):
     y_train = np.array(y_train)
     X_test = np.array(X_test)
     y_test = np.array(y_test)
-    lgb_model = lgb.LGBMRegressor(random_state=52,n_estimators=100)
+    lgb_model = lgb.LGBMRegressor(random_state=random.randint(0,1000),n_estimators=115,verbose=-1)
     lgb_model.fit(X_train, y_train)
     y_pred = lgb_model.predict(X_test)
     return y_pred,y_test,close_min,close_max   
